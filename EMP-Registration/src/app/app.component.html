@@ -1,0 +1,69 @@
+<div class="progress-wrapper">
+  <div id="progress-bar-container">
+    <ul>
+      <li
+        class="step step01"
+        (click)="setClick(step)"
+        *ngFor="let step of stepList"
+        [ngClass]="{ active: step.stepname === activeStep.stepname }"
+      >
+        <div class="step-inner">{{ step.stepname }}</div>
+      </li>
+    </ul>
+    <div id="line">
+      <div id="line-progress"></div>
+    </div>
+    <!-- progress-bar-container -->
+    <div id="progress-content-section">
+      <div
+        class="section-content step1 active"
+        *ngIf="activeStep.stepname == 'Basic Details'"
+      >
+        <h2>Step 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+          impedit! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Necessitatibus, soluta impedit. Eligendi aliquam ratione porro minus
+          temporibus facilis iure numquam.
+        </p>
+      </div>
+      <div
+        class="section-content step2"
+        *ngIf="activeStep.stepname == 'Skills'"
+        [ngClass]="{ active: activeStep.stepname === 'Skills' }"
+      >
+        <h2>Step 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+          impedit! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Necessitatibus, soluta impedit. Eligendi aliquam ratione porro minus
+          temporibus facilis iure numquam. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Repellat, impedit! Lorem ipsum dolor sit
+          amet consectetur, adipisicing elit. Necessitatibus, soluta impedit.
+          Eligendi aliquam ratione porro minus temporibus facilis iure numquam.
+        </p>
+      </div>
+      <div
+        class="section-content step3"
+        *ngIf="activeStep.stepname == 'Experience'"
+        [ngClass]="{ active: activeStep.stepname === 'Experience' }"
+      >
+        <h2>Step 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+          impedit! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Necessitatibus, soluta impedit. Eligendi aliquam ratione porro minus
+          temporibus facilis iure numquam. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Repellat, impedit! Lorem ipsum dolor sit
+          amet consectetur, adipisicing elit. Necessitatibus, soluta impedit.
+          Eligendi aliquam ratione porro minus temporibus facilis iure numquam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+          impedit! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Necessitatibus, soluta impedit. Eligendi aliquam ratione porro minus
+          temporibus facilis iure numquam.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- progress-wrapper -->
+</div>
